@@ -1,0 +1,45 @@
+
+<!---  Date: 24/March/2022 - Thursday -->
+<!---  Author: Virgilio Murillo Ochoa -->
+<!---  personal github: Virgilio-AI -->
+<!---  linkedin: https://www.linkedin.com/in/virgilio-murillo-ochoa-b29b59203 -->
+<!---  contact: virgiliomurilloochoa1@gmail.com -->
+
+{% extends 'layouts/layout.html' %}
+
+{% load static %}
+
+{% block title %}
+Arch Water Linux Downloads
+{% endblock %}
+
+
+{% block content %}
+
+
+<table class="table table-info table-striped">
+	<thead class="table-light">
+		<th scope="row">#</th>
+		<td colspan="2">Version</td>
+		<td>Release date</td>
+		<td>Link</td>
+	</thead>
+	<tbody>
+
+		{% for download in downloads %}
+
+		<th scope="row">{{download.index}}</th>
+
+		<td colspan="2">{{download.name}}Version</td>
+		<td>{{download.created_at}}</td>
+		<td>
+			<a href="{{download.file.url}}" download="{{download.file.url}}"> download</a>
+		</td>
+		{% endfor %}
+	</tbody>
+</table>
+
+{% endblock %}
+
+
+
