@@ -12,7 +12,3 @@ class IsoFileAdmin(admin.ModelAdmin):
 
 admin.site.register(IsoFile,IsoFileAdmin)
 
-
-
-
-
