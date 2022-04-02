@@ -14,6 +14,8 @@ urlpatterns = [
 	path('inicio/',views.index,name='index'),
 	path('',views.index,name='index'),
 	path('downloads/',views.downloads,name="downloads"),
+	path('esto/',views.downloads,name="downloads"),
+
 	]
 
 
