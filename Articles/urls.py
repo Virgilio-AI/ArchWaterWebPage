@@ -10,14 +10,18 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 #
+
+
+app_name = "article"
+
 urlpatterns = [
-	path('inicio/',views.index,name='index'),
-	path('',views.index,name='index'),
-	path('downloads/',views.downloads,name="downloads"),
-	path('esto/',views.downloads,name="downloads"),
+	path('Documentation/',views.Documentation,name='Documentation'),
+	path('',views.AllArticles,name='AllArticles'),
+	path('id/<int:article_id>/',views.detail,name = 'detail'),
 	]
 
 
 if settings.DEBUG:
 	urlpatterns+=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 	urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+

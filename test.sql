@@ -6,8 +6,8 @@
 -- web: virgiliomurillo.com
 
 
-
--- create database django_ArchWater_DB ;
+drop database django_ArchWater_DB ;
+create database django_ArchWater_DB ;
 -- use it on the terminal as sudo
 -- sudo mariadb
 grant all privileges on django_ArchWater_DB.* to 'test_django'@localhost ;

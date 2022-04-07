@@ -25,7 +25,7 @@ class Article(models.Model):
 	content = RichTextField()
 	public = models.BooleanField()
 	# foreign key to create relationship many to one
-	user = models.ForeignKey(User,editable=False,on_delete=models.CASCADE)
+	user = models.ForeignKey(User,on_delete=models.CASCADE)
 	# many to many relationship between Category and Article
 	categories = models.ManyToManyField(Category,blank=True)
 

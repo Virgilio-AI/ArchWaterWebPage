@@ -5,13 +5,15 @@ from .models import Article,Category
 
 
 class CategoryAdmin(admin.ModelAdmin):
-	readonly_fieds = ('created_at','updated_at')
-	search_fields = ('name','description')
-	list_display = ['name','created_at']
+	pass
+#	readonly_fieds = ('created_at','updated_at')
+#	search_fields = ('name','description')
+#	list_display = ['name','created_at']
 
 class ArticleAdmin(admin.ModelAdmin):
-	readonly_fieds = ('user','created_at','updated_at')
-	search_fields = ('title','content','user__username','categories__name')
+	pass
+#	readonly_fieds = ('user','created_at','updated_at')
+#	search_fields = ('title','content','user__username','categories__name')
 
 
 
