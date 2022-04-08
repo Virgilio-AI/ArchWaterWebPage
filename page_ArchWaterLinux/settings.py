@@ -90,7 +90,7 @@ DATABASES = {
 			'ENGINE' : 'django.db.backends.mysql',
 			'NAME' : "django_ArchWater_DB",
 			'USER' : 'test_django',
-			'PASSWORD' : '' ,
+			'PASSWORD' : ':2SQD$0r>yGTb2=~xZr~uBnvE' ,
 			'HOST' : 'localhost',
 			'PORT' : ''
 			}

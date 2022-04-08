@@ -11,3 +11,5 @@ This project when finished is going to have 4 parts
 # check the pdf django_course_second_project.pdf for a better explanation
 ![database_diagram](img_explanation/database_diagram.png)
 
+![databaseCreation](img_explanation/databaseCreation.png)
+
