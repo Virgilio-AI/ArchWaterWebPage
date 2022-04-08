@@ -16,7 +16,7 @@ Wiki
 
 
 {% block content %}
-<h1>Wiki</h1>
+<h1 class="text-center">Wiki</h1>
 {% for article in ListOfArticles %}
 <a href="{% url 'article:detail' article.id %}" style="color:#00FFFF" >
 <h2>{{article.title}}</h2>

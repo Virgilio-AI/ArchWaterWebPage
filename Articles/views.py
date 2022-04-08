@@ -21,4 +21,24 @@ def detail(request,article_id):
 	dic['id'] = article_id
 	article = get_object_or_404(Article,pk=article_id)
 	dic['article'] = article
+	dic['categories'] = article.categories.all()
+	colors = [
+			'#FFB000',
+			'#FFDE00',
+			'#1DFF00',
+			'#FFFFFF',
+			'#00FFDB',
+			'#002BFF',
+			'#7A00FF',
+			]
+	categories_color = []
+	counter = 0
+	for category in dic['categories']:
+		categories_color.append({"object":category,"color":colors[counter%len(colors)]})
+		counter+=1
+	dic['categories'] = categories_color
 	return render(request,'Articles/detail.html',dic)
+
+
+
+

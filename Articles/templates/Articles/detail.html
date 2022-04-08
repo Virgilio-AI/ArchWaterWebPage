@@ -3,15 +3,51 @@
 <!---  personal github: Virgilio-AI -->
 <!---  linkedin: https://www.linkedin.com/in/virgilio-murillo-ochoa-b29b59203 -->
 <!---  contact: virgiliomurilloochoa1@gmail.com -->
-<!---  web: virgiliomurillo.com -->
+<!---  web: virgiliomurillo.com --!>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title></title>
-</head>
-<body>
-	This is the detail page
-</body>
-</html>
+
+{% extends 'layouts/layout.html' %}
+
+{% load static %}
+
+{% block title %}
+Wiki
+{% endblock %}
+
+
+{% block content %}
+	<h1 class="text-center">Wiki</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h3>{{article.title}}</h3>
+	<h5>{{article.created_at}}</h5>
+
+
+
+	{% for category in categories %} <a type="button" class="btn btn-outline-dark btn-sm"href="#" style="font-family:serif;background:{{category.color}}">{{category.object}}</a> {% endfor %}
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h5>* created by {{article.user}}</h5>
+	<p>
+	{{article.content|safe}}
+	</p>
+
+
+
+
+
+{% endblock %}
+
+<footer>
+
+
+</footer>
+
+
+
