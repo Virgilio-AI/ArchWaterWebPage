@@ -1,0 +1,32 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{} ceated the many to many relationship}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{Articles\PYGZus{}article\PYGZus{}categories}\PYG{o}{`}\PYG{+w}{ }\PYG{p}{(}
+\PYG{o}{`}\PYG{n}{id}\PYG{o}{`}\PYG{+w}{ }\PYG{n+nb}{bigint}\PYG{+w}{ }\PYG{n}{AUTO\PYGZus{}INCREMENT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{p}{,}
+\PYG{o}{`}\PYG{n}{article\PYGZus{}id}\PYG{o}{`}\PYG{+w}{ }\PYG{n+nb}{bigint}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{o}{`}\PYG{n}{category\PYGZus{}id}\PYG{o}{`}\PYG{+w}{ }\PYG{n+nb}{bigint}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}
+\PYG{p}{);}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{} added the references for the databases}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{Articles\PYGZus{}article}\PYG{o}{`}
+\PYG{+w}{	}\PYG{k}{ADD}\PYG{+w}{ }\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{Articles\PYGZus{}article\PYGZus{}user\PYGZus{}id\PYGZus{}1d4d21bd\PYGZus{}fk\PYGZus{}auth\PYGZus{}user\PYGZus{}id}\PYG{o}{`}
+\PYG{+w}{	}\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{`}\PYG{n}{user\PYGZus{}id}\PYG{o}{`}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{auth\PYGZus{}user}\PYG{o}{`}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{`}\PYG{n}{id}\PYG{o}{`}\PYG{p}{);}
+
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{Articles\PYGZus{}article\PYGZus{}categories}\PYG{o}{`}
+\PYG{+w}{	}\PYG{k}{ADD}\PYG{+w}{ }\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{Articles\PYGZus{}article\PYGZus{}categories\PYGZus{}article\PYGZus{}id\PYGZus{}category\PYGZus{}id\PYGZus{}72321730\PYGZus{}uniq}\PYG{o}{`}
+\PYG{+w}{	}\PYG{k}{UNIQUE}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{`}\PYG{n}{article\PYGZus{}id}\PYG{o}{`}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{category\PYGZus{}id}\PYG{o}{`}\PYG{p}{);}
+
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{Articles\PYGZus{}article\PYGZus{}categories}\PYG{o}{`}
+\PYG{+w}{	}\PYG{k}{ADD}\PYG{+w}{ }\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{Articles\PYGZus{}article\PYGZus{}cat\PYGZus{}article\PYGZus{}id\PYGZus{}71d48338\PYGZus{}fk\PYGZus{}Articles\PYGZus{}}\PYG{o}{`}
+\PYG{+w}{	}\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{`}\PYG{n}{article\PYGZus{}id}\PYG{o}{`}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{Articles\PYGZus{}article}\PYG{o}{`}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{`}\PYG{n}{id}\PYG{o}{`}\PYG{p}{);}
+
+
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{Articles\PYGZus{}article\PYGZus{}categories}\PYG{o}{`}
+\PYG{+w}{	}\PYG{k}{ADD}\PYG{+w}{ }\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{Articles\PYGZus{}article\PYGZus{}cat\PYGZus{}category\PYGZus{}id\PYGZus{}708f65cf\PYGZus{}fk\PYGZus{}Articles\PYGZus{}}\PYG{o}{`}
+\PYG{+w}{	}\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{`}\PYG{n}{category\PYGZus{}id}\PYG{o}{`}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{Articles\PYGZus{}category}\PYG{o}{`}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{`}\PYG{n}{id}\PYG{o}{`}\PYG{p}{);}
+
+\end{Verbatim}
