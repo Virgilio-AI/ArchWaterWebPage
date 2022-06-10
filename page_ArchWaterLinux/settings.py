@@ -89,9 +89,9 @@ DATABASES = {
 		'default': {
 			'ENGINE' : 'django.db.backends.mysql',
 			'NAME' : "django_ArchWater_DB",
-			'USER' : 'test_django',
-			'PASSWORD' : ':2SQD$0r>yGTb2=~xZr~uBnvE' ,
-			'HOST' : '127.0.0.1',
+			'USER' : 'virgilio',
+			'PASSWORD' : 'z_9jC[B:t7:)o0]Kr+]lloZHg' ,
+			'HOST' : '192.168.1.66',
 			'PORT' : ''
 			}
 		}
