@@ -91,7 +91,7 @@ DATABASES = {
 			'NAME' : "django_ArchWater_DB",
 			'USER' : 'test_django',
 			'PASSWORD' : ':2SQD$0r>yGTb2=~xZr~uBnvE' ,
-			'HOST' : 'localhost',
+			'HOST' : '127.0.0.1',
 			'PORT' : ''
 			}
 		}
