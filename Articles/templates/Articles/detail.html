@@ -16,27 +16,32 @@ Wiki
 
 
 {% block content %}
+
+<div class="jumbotron">
+
 	<h1 class="text-center">Wiki</h1>
-	<br>
-	<br>
-	<br>
-	<br>
 	<h3>{{article.title}}</h3>
 	<h5>{{article.created_at}}</h5>
 
 
 
-	{% for category in categories %} <a type="button" class="btn btn-outline-dark btn-sm"href="#" style="font-family:serif;background:{{category.color}}">{{category.object}}</a> {% endfor %}
+	{% for category in categories %} <a href="#" class="btn btn-default">{{category.object}}</a> {% endfor %}
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+
+		
 	<h5>* created by {{article.user}}</h5>
+</div>
+
+
+
+<div class="jumbotron" style="background: #3366cc; opacity:0.85;">
+
 	<p>
 	{{article.content|safe}}
 	</p>
+
+
+</div>
 
 
 

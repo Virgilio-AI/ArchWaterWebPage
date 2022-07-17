@@ -8,12 +8,14 @@ def Documentation(request):
 	ListOfArticles = Article.objects.all()
 	dic = {}
 	dic["ListOfArticles"] = ListOfArticles
+	dic["Header"] = "Documentation"
 	return render(request,'Articles/index.html',dic)
 
 def AllArticles(request):
 	ListOfArticles = Article.objects.all()
 	dic = {}
 	dic["ListOfArticles"] = ListOfArticles
+	dic["Header"] = "Wiki"
 	return render(request,'Articles/index.html',dic)
 
 def detail(request,article_id):

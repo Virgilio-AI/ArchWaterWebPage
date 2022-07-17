@@ -10,8 +10,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Hacker Bootstrap Theme</title>
+<title>
+	 {% block title %}
+    Water Linux
+	 {% endblock %}
+</title>
 	 <link href="{% static "css/hacker.css" %}" rel="stylesheet">
 
     <style>
@@ -44,7 +47,7 @@
                 </button>
 
 				<a class="navbar-brand" href="{% url 'main:index' %}">
-				<img src="{% static "MainApp/images/LogoSmall.png" %}" width="20" height="20" class="" >
+				<img src="{% static "MainApp/images/LogoSmall.png" %}" width="30" height="20" class="" >
 				</a>
 				<a class="navbar-brand" href="{% url 'main:index' %}">
 					<p class="text-info">Water Linux</p>
