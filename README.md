@@ -18,10 +18,10 @@ The information of the database is in ArchWaterWebPage/page_ArchWaterLinux/setti
 DATABASES = {
 		'default': {
 			'ENGINE' : 'django.db.backends.mysql',
-			'NAME' : "django_ArchWater_DB",
-			'USER' : 'virgilio',
-			'PASSWORD' : 'z_9jC[B:t7:)o0]Kr+]lloZHg' ,
-			'HOST' : '192.168.1.66',
+			'NAME' : "database name",
+			'USER' : 'user',
+			'PASSWORD' : 'passsword' ,
+			'HOST' : 'ip',
 			'PORT' : ''
 			}
 		}
